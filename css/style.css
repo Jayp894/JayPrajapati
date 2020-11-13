@@ -239,8 +239,12 @@ section.home .hero .right h1 span {
 
 section.home .hero .right p{
     line-height: 1.9;
-    margin-bottom: 2rem;
+    margin: 2px;
     color: var(--light);
+}
+
+section.home .hero .right p:last-child{
+    margin-bottom: 2rem;
 }
 
 section.home .hero .right{
@@ -754,7 +758,7 @@ section.resume .box{
 
 section.resume {
     background: var(--secondary);
-}
+} 
 
 .bold{
     font-weight: 700;
@@ -770,7 +774,7 @@ section.resume {
 section.resume .resume-box{
     margin-top: 3rem;
     display: block;
-    box-shadow: 3px 3px 7px 7px var(--dark);
+    box-shadow: 3px 3px 7px 7px var(--dark); 
     background: var(--light);
     margin-left: auto;
     margin-right: auto;
@@ -781,6 +785,7 @@ section.resume h1{
     color: var(--primary);
     text-shadow: 2px 2px var(--dark);
     font-weight: 800;
+    font-size: 35px;
 }
 
 section.resume .resume-box .resume-header{
@@ -793,25 +798,24 @@ section.resume .resume-box .resume-header ul {
     flex-direction: row;
 }
 
-section.resume .resume-box .resume-header ul li{
-    width: 100%;
-    text-align: center;
-}
 
 section.resume .resume-box .resume-header ul li.img img{
-    width: 250px;
-    height: 200px;
-    margin: 1rem;
+    width: 270px;
+    height: 100%;
 }
 
 section.resume .resume-box .resume-header ul li.name{
-    margin: 3rem 0;
+    margin: 0;
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
 }
 
 section.resume .resume-box .resume-header ul li h2{
     color: var(--pure);
     font-weight: bolder;
-    margin: 1rem 0;
+    letter-spacing: 12px;
+    margin: 4rem 0;
     margin-bottom: 0.5rem;
     text-align: center;
     font-size: 27px;
@@ -825,7 +829,20 @@ section.resume .resume-box .resume-header ul li h6{
     text-align: center;
 }
 
+section.resume .resume-box .resume-header ul li  p{
+    font-size: 15px;
+    color: var(--pure);
+    text-decoration: none;
+    margin: 0.5rem;
+}
 
+section.resume .resume-box .resume-header ul li a{
+    text-decoration: none;
+}
+
+section.resume .resume-box .resume-header ul li  p:last-child{
+    margin-bottom: 0;
+}
 
 section.resume .resume-box .resume-body{
     margin-bottom: 4rem;
@@ -977,11 +994,25 @@ section.resume .resume-box .resume-body .resume-body-right .resume-item h3{
     font-weight: 900;
 }
 
-section.resume .resume-box .resume-body .resume-body-right .resume-item h4{
+
+section.resume .resume-box .resume-body .resume-body-right .resume-item.resume-education h4{
+    color: var(--secondary);
+    font-size: 15px;
+    margin-left: 0.5rem;
+}
+
+section.resume .resume-box .resume-body .resume-body-right .resume-item.resume-work h4{
+    color: var(--secondary);
+    font-size: 15px;
+    margin-left: 0.5rem;
+}
+
+section.resume .resume-box .resume-body .resume-body-right .resume-item h2{
     color: var(--dark);
-    font-weight: bold;
     font-size: 20px;
     margin-left: 0.5rem;
+    font-weight: bold;
+    padding-top: 3px;
 }
 
 section.resume .resume-box .resume-body .resume-body-right .resume-item h6{
@@ -989,6 +1020,19 @@ section.resume .resume-box .resume-body .resume-body-right .resume-item h6{
     font-size: 15px;
     margin: 3px 0;
     margin-left: 0.5rem;
+}
+
+section.resume .resume-box .resume-body .resume-body-right .resume-item .present{
+    background: var(--primary);
+    color:var(--pure);
+    border-radius: 20%;
+    padding: 2px 3px;
+    font-size: 15px;
+    text-align: center;
+}
+
+section.resume .resume-box .resume-body .resume-body-right .resume-item .duration{
+    display: flex;
 }
 
 section.resume .resume-box .resume-body .resume-body-right .resume-item p{
@@ -1092,6 +1136,13 @@ section.resume .resume-box .resume-body .resume-body-right .resume-item.resume-w
     }
 }
 
+@media(max-width:250px){
+    section.resume .resume-box .resume-header ul li.img img{
+        width: 100px!important;
+        margin-top: 2rem;
+    }
+}
+
 @media(max-width:770px){
     section.resume .resume-box .resume-body{
         flex-direction: column-reverse;
@@ -1099,9 +1150,33 @@ section.resume .resume-box .resume-body .resume-body-right .resume-item.resume-w
     section.resume .resume-box .resume-body .resume-body-left{
         width: 100%;
     }
+    section.resume h1{
+        font-size: 30px;
+    }
     section.resume .resume-box .resume-header ul {
         flex-direction: column;
+        align-items: center;
     }   
+    section.resume .resume-box .resume-header ul li.img img{
+        width: 200px;
+        height: 100%;
+        margin-top: 2rem;
+    }
+    section.resume .resume-box .resume-header ul li h2{
+        margin: 0.5rem;
+        letter-spacing: 0px;
+        font-size: 20px;
+    }
+    section.resume .resume-box .resume-header ul li h6{
+        font-size: 14px;
+    }
+    section.resume .resume-box .resume-header ul li p{
+        font-size: 13px;
+    }
+    section.resume .resume-box .resume-header ul li p:last-child {
+        margin-bottom: 2rem;
+            font-size: 12px;
+    }
 }
 
 
